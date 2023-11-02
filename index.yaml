@@ -3,6 +3,23 @@ entries:
   tolgee:
   - apiVersion: v2
     appVersion: 3.37.0
+    created: "2023-11-02T10:53:00.224903253Z"
+    dependencies:
+    - alias: postgresql
+      condition: postgresql.standalone.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.10.0
+    description: This is the unofficial helm package for Tolgee.io project.
+    digest: d8f57e9d3e556c18ed85cb26db01b8ac2b0272b71901a8a94498627ff934c5b3
+    icon: https://tolgee.io/img/tolgeeLogo.svg
+    name: tolgee
+    type: application
+    urls:
+    - https://github.com/Sisu-Tech/helm-tolgee/releases/download/tolgee-0.4.3/tolgee-0.4.3.tgz
+    version: 0.4.3
+  - apiVersion: v2
+    appVersion: 3.37.0
     created: "2023-11-01T13:00:33.961512637Z"
     dependencies:
     - alias: postgresql
@@ -239,4 +256,4 @@ entries:
     urls:
     - https://github.com/Sisu-Tech/helm-tolgee/releases/download/tolgee-0.3.3/tolgee-0.3.3.tgz
     version: 0.3.3
-generated: "2023-11-01T13:00:33.961618335Z"
+generated: "2023-11-02T10:53:00.225010256Z"
