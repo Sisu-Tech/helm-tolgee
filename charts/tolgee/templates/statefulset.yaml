@@ -104,7 +104,10 @@ spec:
                   key: {{ .Values.tolgee.authentication.secret.jwtSecretKey }}
             {{- if .Values.tolgee.authentication.google.enabled }}
             - name: "tolgee.authentication.google.client-id"
-              value: {{ .Values.tolgee.authentication.google.clientId }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.tolgee.authentication.google.clientIdName }}
+                  key: {{ .Values.tolgee.authentication.google.clientIdKey }}
             - name: "tolgee.authentication.google.client-secret"
               valueFrom:
                 secretKeyRef:
@@ -119,7 +122,10 @@ spec:
             {{- end }}
             {{- if .Values.tolgee.authentication.github.enabled }}
             - name: "tolgee.authentication.github.client-id"
-              value: {{ .Values.tolgee.authentication.github.clientId }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.tolgee.authentication.github.clientIdName }}
+                  key: {{ .Values.tolgee.authentication.github.clientIdKey }}
             - name: "tolgee.authentication.github.client-secret"
               valueFrom:
                 secretKeyRef:
@@ -132,7 +138,10 @@ spec:
             {{- end }}
             {{- if .Values.tolgee.authentication.oauth2.enabled }}
             - name: "tolgee.authentication.oauth2.client-id"
-              value: {{ .Values.tolgee.authentication.oauth2.clientId }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.tolgee.authentication.oauth2.clientIdName }}
+                  key: {{ .Values.tolgee.authentication.oauth2.clientIdKey }}
             - name: "tolgee.authentication.oauth2.client-secret"
               valueFrom:
                 secretKeyRef:

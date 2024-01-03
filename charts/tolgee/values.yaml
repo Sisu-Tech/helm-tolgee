@@ -108,6 +108,12 @@ tolgee:
         enabled: false
         storageClass: ''
         size: 1Gi
+    cache:
+        enabled: false
+        useRedis: false
+        defaultTtl: 7200000
+        storageClass: ''
+        size: 1Gi
     smtp:
         secret:
             name: secretName
@@ -120,8 +126,9 @@ tolgee:
             name: secretName
             jwtSecretKey: jwtSecret
         google:
-            enabled: false
-            clientId: ''
+            enabled: true
+            clientIdName: ''
+            clientIdKey: ''
             clientSecretName: ''
             clientSecretKey: ''
             workspaceDomain: ''
@@ -129,14 +136,16 @@ tolgee:
             userUrl: 'https://www.googleapis.com/oauth2/v3/userinfo'
         github:
             enabled: false
-            clientId: ''
+            clientIdName: ''
+            clientIdKey: ''
             clientSecretName: ''
             clientSecretKey: ''
             authorizationUrl: 'https://github.com/login/oauth/access_token'
             userUrl: 'https://api.github.com/user'
         oauth2:
             enabled: false
-            clientId: ''
+            clientIdName: ''
+            clientIdKey: ''
             clientSecretName: ''
             clientSecretKey: ''
             scopes: 'openid email profile'
